@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+        android:text="Práctica #1 Unidad 1"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Cuantas celdas deberá generar:"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/layocampos">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginBottom="10dp"
+                android:text="Celdas:"
+                android:textColor="#000000"
+                android:textSize="17dp"/>
+
+            <EditText
+                android:id="@+id/celdas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="                                                   "
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoRenglones"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Renglones:"
+                android:textColor="#000000"
+                android:textSize="17dp"
+                android:id="@+id/textren"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/renglones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="                                                   "
+                android:inputType="number"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Vector"
+            android:textSize="17dp"
+            android:checked="true"
+            android:id="@+id/vector"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Matriz"
+            android:textSize="17dp"
+            android:id="@+id/matriz"/>
+    </RadioGroup>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/menulist"
+        android:entries="@array/menu"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>
